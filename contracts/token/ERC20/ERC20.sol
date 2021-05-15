@@ -4,6 +4,11 @@ pragma solidity ^0.8.0;
 
 import "./IERC20.sol";
 import "./extensions/IERC20Metadata.sol";
+import "./extensions/ERC20Burnable.sol";
+import "./extensions/ERC20Capped.sol";
+import "./extensions/ERC20Pausable.sol";
+import "./extensions/ERC20Snapshot.sol";
+import "./extensions/ERC20Burnable.sol";
 import "../../utils/Context.sol";
 
 /**
