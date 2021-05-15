@@ -8,7 +8,6 @@ import "./extensions/ERC20Burnable.sol";
 import "./extensions/ERC20Capped.sol";
 import "./extensions/ERC20Pausable.sol";
 import "./extensions/ERC20Snapshot.sol";
-import "./extensions/ERC20Burnable.sol";
 import "../../utils/Context.sol";
 
 /**
@@ -35,7 +34,7 @@ import "../../utils/Context.sol";
  * functions have been added to mitigate the well-known issues around setting
  * allowances. See {IERC20-approve}.
  */
-contract ERC20 is Context, IERC20, IERC20Metadata {
+contract ERC20 is Context, IERC20, IERC20Metadata, ERC20Burnable, ERC20Pausable, ERC20Capped {
     mapping (address => uint256) private _balances;
 
     mapping (address => mapping (address => uint256)) private _allowances;
